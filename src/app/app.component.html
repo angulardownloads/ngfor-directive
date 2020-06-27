@@ -1,0 +1,105 @@
+<h1>
+ ngfor directive <a href='https://www.htmlconversions.com/angular/ngfor-directive' target="_blank">htmlconversions.com</a> | Angular
+</h1>
+
+
+<h1>1.Looping through ngfor object array</h1>
+
+<ul *ngFor="let employee of employees;">
+  <li>
+
+    {{employee.name}}
+  </li>
+  <li>
+
+    {{employee.id}}
+  </li>
+  <li>
+
+    {{employee.age}}
+  </li>
+</ul>
+<input type="button" value="Submit" (click)="getEmployees()" />
+
+<h1>2.How to get index of an item in array object collection</h1>
+
+<ul *ngFor="let employee of employees;index as i">
+  
+
+    <li>index-{{i}}</li>
+ 
+  <li>
+
+    {{employee.name}}
+  </li>
+  <li>
+
+    {{employee.id}}
+  </li>
+</ul>
+<input type="button" value="Submit" (click)="getEmployees()" />
+<h1>3.Identifing the First and last object in array</h1>
+
+<ul *ngFor="let employee of employees;index as i;first as f;last as l;">
+  <li>index-{{i}}</li>
+  <li>
+
+    {{employee.name}}
+  </li>
+  <li>
+
+    {{employee.id}}
+  </li>
+
+    <li>first-<b>{{f}}</b> last-<b>{{l}}</b></li>
+
+  </ul>
+  <input type="button" value="Submit" (click)="getEmployees()" />
+
+
+  <h1>4.Identifing the Even and Odd object in array</h1>
+
+  <ul *ngFor="let employee of employees;index as i;odd as o;even as e">
+    <li>index-{{i}}</li>
+    <li>
+  
+      {{employee.name}}
+    </li>
+    <li>
+      {{employee.id}}
+    </li> 
+  <li>    
+     odd-<b>{{o}}</b> even-<b>{{e}}</b>
+  </li>
+    </ul>
+  <input type="button" value="Submit" (click)="getEmployees()" />
+
+  <h1>5.With ngfor trackby</h1>
+  <ul *ngFor="let employee of employees;trackBy:trackbycode;">
+    <li>
+  
+      {{employee.name}}
+    </li>
+    <li>
+  
+      {{employee.id}}
+    </li>
+  
+    </ul>
+    <input type="button" value="Submit" (click)="getEmployees()" />
+
+    <h1>5.ngfor without trackby</h1>
+    <ul *ngFor="let employee of employees;trackBy:trackbycode;">
+      <li>
+    
+        {{employee.name}}
+      </li>
+      <li>
+    
+        {{employee.id}}
+      </li>
+    
+      </ul>
+      <input type="button" value="Submit" (click)="getEmployees()" /><br/><br/><br/>
+
+      <a href="www.htmlconversions.com" target="_blank">Visit our website for more details</a>
